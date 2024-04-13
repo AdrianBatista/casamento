@@ -5,7 +5,7 @@ export function HomePage() {
     <Box>
       <Box
         sx={{
-          backgroundImage: 'url("/public/cover.png")',
+          backgroundImage: 'url("/cover.png")',
           height: "100vh",
           width: "100vw",
           backgroundSize: "cover",
@@ -43,7 +43,7 @@ export function HomePage() {
       <Box sx={{ width: "100vw", height: "100vh", position: "relative" }}>
         <Box
           component={"img"}
-          src={"/public/moldura.png"}
+          src={"/moldura.png"}
           sx={{
             position: "absolute",
             top: "20px",
@@ -57,7 +57,7 @@ export function HomePage() {
         />
         <Box
           component={"img"}
-          src={"/public/mancha.png"}
+          src={"/mancha.png"}
           sx={{
             position: "absolute",
             bottom: "0",
@@ -70,7 +70,7 @@ export function HomePage() {
         />
         <Box
           component={"img"}
-          src={"/public/mancha.png"}
+          src={"/mancha.png"}
           sx={{
             position: "absolute",
             top: "0",
@@ -84,7 +84,7 @@ export function HomePage() {
         />
         <Box
           component={"img"}
-          src={"/public/moldura.png"}
+          src={"/moldura.png"}
           sx={{
             position: "absolute",
             bottom: "20px",
