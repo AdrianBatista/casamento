@@ -67,7 +67,6 @@ export function MainLayout() {
         <Box sx={{ display: { xs: "none", md: "block" } }}>
           <DesktopAppBar menu={state.drawer.menu} />
         </Box>
-        <Box sx={{ height: { xs: "60px", md: "120px", lg: "60px" } }}></Box>
         <Box>
           <Outlet />
         </Box>
