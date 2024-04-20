@@ -46,7 +46,7 @@ export function HomePage() {
           width: "100vw",
           minHeight: "100vh",
           position: "relative",
-          paddingBlock: 20,
+          paddingBlock: { xs: 10, md: 0 },
         }}
       >
         <Box
@@ -74,6 +74,7 @@ export function HomePage() {
               xs: "15rem",
               md: "25rem",
             },
+            zIndex: "5",
           }}
         />
         <Box
@@ -88,6 +89,7 @@ export function HomePage() {
               md: "25rem",
             },
             transform: "rotate(180deg)",
+            zIndex: "5",
           }}
         />
         <Box
@@ -102,12 +104,13 @@ export function HomePage() {
               md: "25rem",
             },
             transform: "rotate(180deg)",
+            zIndex: "10",
           }}
         />
         <Box
           sx={{
             width: "100%",
-            height: "100%",
+            height: "100vh",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
