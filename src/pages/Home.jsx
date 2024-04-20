@@ -20,7 +20,7 @@ export function HomePage() {
           <Typography
             variant="h2"
             sx={{
-              fontSize: "6rem",
+              fontSize: { xs: "4rem", md: "6rem" },
               color: "white",
               fontFamily: '"Parisienne", cursive',
             }}
@@ -33,7 +33,7 @@ export function HomePage() {
             sx={{
               fontFamily: '"Cormorant Garamond", serif',
               fontWeight: 700,
-              fontSize: "4rem",
+              fontSize: { xs: "3rem", md: "4rem" },
               color: "white",
             }}
           >
