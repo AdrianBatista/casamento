@@ -1,4 +1,5 @@
 import { Box, Container, Typography } from "@mui/material";
+import DateCounter from "../components/DateCounter";
 
 export function HomePage() {
   return (
@@ -40,7 +41,14 @@ export function HomePage() {
           </Typography>
         </Container>
       </Box>
-      <Box sx={{ width: "100vw", height: "100vh", position: "relative" }}>
+      <Box
+        sx={{
+          width: "100vw",
+          minHeight: "100vh",
+          position: "relative",
+          paddingBlock: 20,
+        }}
+      >
         <Box
           component={"img"}
           src={"/moldura.png"}
@@ -96,6 +104,31 @@ export function HomePage() {
             transform: "rotate(180deg)",
           }}
         />
+        <Box
+          sx={{
+            width: "100%",
+            height: "100%",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            flexDirection: "column",
+          }}
+        >
+          <Typography
+            variant="h4"
+            sx={{
+              fontFamily: '"Cormorant Garamond", serif',
+              fontWeight: 300,
+              fontSize: { xs: "4rem", md: "6rem" },
+              color: "#4D5E89",
+              mb: 4,
+              width: { xs: "250px", md: "auto" },
+            }}
+          >
+            Contagem Regressiva
+          </Typography>
+          <DateCounter />
+        </Box>
       </Box>
     </Box>
   );
