@@ -1,5 +1,6 @@
 import { Box, Container, Typography } from "@mui/material";
 import DateCounter from "../components/DateCounter";
+import Pictures from "../components/Pictures";
 
 export function HomePage() {
   return (
@@ -132,6 +133,31 @@ export function HomePage() {
           </Typography>
           <DateCounter />
         </Box>
+      </Box>
+      <Box
+        sx={{
+          background: "#F3F5FC",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          pb: 15,
+        }}
+      >
+        <Typography
+          variant="h4"
+          sx={{
+            fontFamily: '"Cormorant Garamond", serif',
+            fontWeight: 300,
+            fontSize: { xs: "4rem", md: "6rem" },
+            color: "#4D5E89",
+            mt: 20,
+            mb: 10,
+            width: { xs: "250px", md: "auto" },
+          }}
+        >
+          Nossa História
+        </Typography>
+        <Pictures />
       </Box>
     </Box>
   );
