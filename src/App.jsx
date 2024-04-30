@@ -10,10 +10,10 @@ export function App() {
     <Routes>
       <Route path="/" element={<MainLayout menuSpace={false} />}>
         <Route index element={<HomePage />} />
-        <Route path="/presentes" element={<PresentsPage />} />
       </Route>
       <Route path="/" element={<MainLayout menuSpace={true} />}>
         <Route path="/local" element={<PlacePage />} />
+        <Route path="/presentes" element={<PresentsPage />} />
       </Route>
     </Routes>
   );
