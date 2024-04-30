@@ -10,7 +10,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { closeModal } from "../slices/uiSlice";
 import { MyModal } from "../components/MyModal";
 
-export function MainLayout() {
+export function MainLayout({ menuSpace }) {
   const dispatch = useDispatch();
   const ui = useSelector((state) => state.ui);
 
@@ -67,6 +67,9 @@ export function MainLayout() {
         <Box sx={{ display: { xs: "none", md: "block" } }}>
           <DesktopAppBar menu={state.drawer.menu} />
         </Box>
+        {menuSpace && (
+          <Box sx={{ height: { xs: "60px", md: "120px", lg: "60px" } }}></Box>
+        )}
         <Box>
           <Outlet />
         </Box>
