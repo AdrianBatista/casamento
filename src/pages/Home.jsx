@@ -61,7 +61,7 @@ export function HomePage() {
               xs: "15rem",
               md: "25rem",
             },
-            zIndex: "10",
+            zIndex: "2",
           }}
         />
         <Box
@@ -75,7 +75,7 @@ export function HomePage() {
               xs: "15rem",
               md: "25rem",
             },
-            zIndex: "5",
+            zIndex: "1",
           }}
         />
         <Box
@@ -90,7 +90,7 @@ export function HomePage() {
               md: "25rem",
             },
             transform: "rotate(180deg)",
-            zIndex: "5",
+            zIndex: "1",
           }}
         />
         <Box
@@ -105,32 +105,44 @@ export function HomePage() {
               md: "25rem",
             },
             transform: "rotate(180deg)",
-            zIndex: "10",
+            zIndex: "2",
           }}
         />
         <Box
           sx={{
             width: "100%",
-            height: "100vh",
+            height: "max-content",
+            minHeight: "100vh",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
             flexDirection: "column",
+            paddingBlock: 5,
           }}
         >
-          <Typography
-            variant="h4"
+          <Box
             sx={{
-              fontFamily: '"Cormorant Garamond", serif',
-              fontWeight: 300,
-              fontSize: { xs: "4rem", md: "6rem" },
-              color: "#4D5E89",
-              mb: 4,
-              width: { xs: "250px", md: "auto" },
+              width: "100%",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
             }}
           >
-            Contagem Regressiva
-          </Typography>
+            <Typography
+              variant="h4"
+              sx={{
+                fontFamily: '"Cormorant Garamond", serif',
+                fontWeight: 300,
+                fontSize: { xs: "4rem", md: "6rem" },
+                color: "#4D5E89",
+                mb: 4,
+                width: { xs: "250px", md: "auto" },
+                zIndex: "3",
+              }}
+            >
+              Contagem Regressiva
+            </Typography>
+          </Box>
           <DateCounter />
         </Box>
       </Box>

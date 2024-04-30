@@ -1,6 +1,6 @@
-import { Box, Typography } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
 import Countdown from "react-countdown";
+import DateCard from "./DateCard";
 
 const renderer = ({ days, hours, minutes, seconds }) => {
   return (
@@ -8,148 +8,20 @@ const renderer = ({ days, hours, minutes, seconds }) => {
       container
       spacing={2}
       sx={{
-        width: { xs: 120, md: "auto" },
+        width: { xs: "240", md: "auto" },
       }}
     >
       <Grid xs={12} md={3}>
-        <Box
-          sx={{
-            background: "#4D5E89",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            width: { xs: 120, md: 180 },
-            height: { xs: 120, md: 180 },
-          }}
-        >
-          <Typography
-            sx={{
-              fontFamily: '"Poppins", sans-serif',
-              fontWeight: 900,
-              fontSize: "4rem",
-              lineHeight: "4rem",
-              color: "white",
-            }}
-          >
-            {days}
-          </Typography>
-          <Typography
-            sx={{
-              fontFamily: '"Poppins", sans-serif',
-              fontWeight: 300,
-              fontSize: "1rem",
-              color: "white",
-            }}
-          >
-            DIAS
-          </Typography>
-        </Box>
+        <DateCard label="DAYS" value={days} />
       </Grid>
       <Grid xs={12} md={3}>
-        <Box
-          sx={{
-            background: "#4D5E89",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            width: { xs: 120, md: 180 },
-            height: { xs: 120, md: 180 },
-          }}
-        >
-          <Typography
-            sx={{
-              fontFamily: '"Poppins", sans-serif',
-              fontWeight: 900,
-              fontSize: "4rem",
-              lineHeight: "4rem",
-              color: "white",
-            }}
-          >
-            {hours}
-          </Typography>
-          <Typography
-            sx={{
-              fontFamily: '"Poppins", sans-serif',
-              fontWeight: 300,
-              fontSize: "1rem",
-              color: "white",
-            }}
-          >
-            HORAS
-          </Typography>
-        </Box>
+        <DateCard label="HORAS" value={hours} />
       </Grid>
       <Grid xs={12} md={3}>
-        <Box
-          sx={{
-            background: "#4D5E89",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            width: { xs: 120, md: 180 },
-            height: { xs: 120, md: 180 },
-          }}
-        >
-          <Typography
-            sx={{
-              fontFamily: '"Poppins", sans-serif',
-              fontWeight: 900,
-              fontSize: "4rem",
-              lineHeight: "4rem",
-              color: "white",
-            }}
-          >
-            {minutes}
-          </Typography>
-          <Typography
-            sx={{
-              fontFamily: '"Poppins", sans-serif',
-              fontWeight: 300,
-              fontSize: "1rem",
-              color: "white",
-            }}
-          >
-            MINUTOS
-          </Typography>
-        </Box>
+        <DateCard label="MINUTOS" value={minutes} />
       </Grid>
       <Grid xs={12} md={3}>
-        <Box
-          sx={{
-            background: "#4D5E89",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            width: { xs: 120, md: 180 },
-            height: { xs: 120, md: 180 },
-          }}
-        >
-          <Typography
-            sx={{
-              fontFamily: '"Poppins", sans-serif',
-              fontWeight: 900,
-              fontSize: "4rem",
-              lineHeight: "4rem",
-              color: "white",
-            }}
-          >
-            {seconds}
-          </Typography>
-          <Typography
-            sx={{
-              fontFamily: '"Poppins", sans-serif',
-              fontWeight: 300,
-              fontSize: "1rem",
-              color: "white",
-            }}
-          >
-            SEGUNDOS
-          </Typography>
-        </Box>
+        <DateCard label="SEGUNDOS" value={seconds} />
       </Grid>
     </Grid>
   );
