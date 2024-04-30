@@ -120,8 +120,8 @@ export default function Pictures() {
   return (
     <Container>
       <Grid2 container spacing={2}>
-        {picturesData.map((picture) => (
-          <Grid2 xs={12} sm={6} md={3}>
+        {picturesData.map((picture, index) => (
+          <Grid2 xs={12} sm={6} md={3} key={index}>
             <img src={picture.url} width="100%" />
           </Grid2>
         ))}
