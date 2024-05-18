@@ -7,6 +7,7 @@ import { Provider } from "react-redux";
 import { store } from "./store.js";
 import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import { firestore } from "./firebase.js";
 
 const theme = createTheme({
   palette: {
