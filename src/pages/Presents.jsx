@@ -1,13 +1,4 @@
-import {
-  Box,
-  Button,
-  Card,
-  CardActions,
-  CardContent,
-  CardMedia,
-  Container,
-  Typography,
-} from "@mui/material";
+import { Box, Button, Container, Typography } from "@mui/material";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 
 export function PresentsPage() {
@@ -84,7 +75,7 @@ export function PresentsPage() {
             display: "flex",
             padding: 3,
           }}
-          href="#"
+          href="/gifts"
         >
           <Grid2 container spacing={3}>
             <Grid2
