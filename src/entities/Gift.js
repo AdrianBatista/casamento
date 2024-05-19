@@ -12,7 +12,8 @@ export default class Gift {
   }
 
   async create(data) {
-    const registry = doc(this.#collection, crypto.randomUUID());
-    await setDoc(registry, data);
+    const id = crypto.randomUUID();
+    const registry = doc(this.#collection, id);
+    await setDoc(registry, { id, ...data });
   }
 }
