@@ -10,21 +10,10 @@ import {
   Container,
   Typography,
 } from "@mui/material";
-import MP from "../payment/MP";
 
 export function GiftsPage() {
   const [gifts, setGifts] = useState([]);
   const giftEntity = new Gift();
-
-  const redirectToPayment = async (gift) => {
-    const paymentLink = await new MP().generatePaymentLink(gift);
-    var a = document.createElement("a");
-    document.body.appendChild(a);
-    a.style = "display: none";
-    a.href = paymentLink;
-    a.target = "_blank";
-    a.click();
-  };
 
   useEffect(() => {
     const getGifts = async () => {
@@ -60,7 +49,7 @@ export function GiftsPage() {
                     variant="contained"
                     fullWidth
                     sx={{ backgroundColor: "#4D5E89" }}
-                    onClick={() => redirectToPayment(gift)}
+                    href={`/gift/${gift.id}`}
                   >
                     Comprar
                   </Button>
