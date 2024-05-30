@@ -6,6 +6,7 @@ import { PlacePage } from "./pages/Place";
 import { PresentsPage } from "./pages/Presents";
 import { GiftsPage } from "./pages/Gifts";
 import { GiftPage } from "./pages/Gift";
+import { SuccessPaymentPage } from "./pages/SuccessPayment";
 
 export function App() {
   return (
@@ -18,6 +19,7 @@ export function App() {
         <Route path="/presentes" element={<PresentsPage />} />
         <Route path="/gifts" element={<GiftsPage />} />
         <Route path="/gift/:id" element={<GiftPage />} />
+        <Route path="/payment/success" element={<SuccessPaymentPage />} />
       </Route>
     </Routes>
   );

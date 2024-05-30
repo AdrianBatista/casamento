@@ -1,4 +1,11 @@
-import { collection, doc, getDoc, getDocs, setDoc } from "firebase/firestore";
+import {
+  collection,
+  doc,
+  getDoc,
+  getDocs,
+  setDoc,
+  updateDoc,
+} from "firebase/firestore";
 import { firestore } from "../firebase";
 
 export default class Payment {
@@ -12,7 +19,7 @@ export default class Payment {
   }
 
   async create(data) {
-    const id = crypto.randomUUID();
+    const id = data.id;
     const registry = doc(this.#collection, id);
     await setDoc(registry, { id: id, ...data });
   }
@@ -21,5 +28,10 @@ export default class Payment {
     const registry = doc(this.#collection, id);
     const data = await getDoc(registry);
     return data.data();
+  }
+
+  async edit(id, data) {
+    const registry = doc(this.#collection, id);
+    await updateDoc(registry, data);
   }
 }

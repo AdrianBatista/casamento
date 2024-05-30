@@ -21,6 +21,7 @@ export function GiftPage() {
 
   const handleChange = (e) => {
     setForm((old) => ({
+      ...old,
       [e.target.name]: e.target.value,
     }));
   };
@@ -36,7 +37,8 @@ export function GiftPage() {
 
   const redirectToPayment = async (gift) => {
     const payment = await new MP().generatePayment(gift);
-    await paymentEntity.create({ ...payment, ...form });
+    const data = { ...payment, ...form };
+    await paymentEntity.create(data);
     redirect(payment.sandbox_init_point);
   };
 
@@ -77,37 +79,44 @@ export function GiftPage() {
           <Typography variant="h4" mt={5}>
             Seus Dados
           </Typography>
-          <Box mt={2}>
-            <TextField
-              sx={{ mb: 1 }}
-              id="nameField"
-              label="Nome Completo"
-              name="name"
-              variant="outlined"
-              required
-              fullWidth
-              onChange={handleChange}
-            />
-            <TextField
-              id="messageField"
-              label="Mensagem (Opcional)"
-              variant="outlined"
-              name="message"
-              fullWidth
-              multiline
-              onChange={handleChange}
-            />
-          </Box>
-          <Box>
-            <Button
-              variant="contained"
-              fullWidth
-              sx={{ backgroundColor: "#4D5E89", mt: 1 }}
-              onClick={() => redirectToPayment(gift)}
-            >
-              Seguir para compra
-            </Button>
-          </Box>
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              redirectToPayment(gift);
+            }}
+          >
+            <Box mt={2}>
+              <TextField
+                sx={{ mb: 1 }}
+                id="nameField"
+                label="Nome Completo"
+                name="name"
+                variant="outlined"
+                required
+                fullWidth
+                onChange={handleChange}
+              />
+              <TextField
+                id="messageField"
+                label="Mensagem (Opcional)"
+                variant="outlined"
+                name="message"
+                fullWidth
+                multiline
+                onChange={handleChange}
+              />
+            </Box>
+            <Box>
+              <Button
+                variant="contained"
+                fullWidth
+                sx={{ backgroundColor: "#4D5E89", mt: 1 }}
+                type="submit"
+              >
+                Seguir para compra
+              </Button>
+            </Box>
+          </form>
         </Paper>
       </Container>
     </>

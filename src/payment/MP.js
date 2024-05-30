@@ -33,7 +33,7 @@ export default class MP {
     });
     const responseData = await response.json();
     return {
-      payment_id: responseData.id,
+      id: responseData.id,
       init_point: responseData.init_point,
       sandbox_init_point: responseData.sandbox_init_point,
       item_id: gift.id,
