@@ -7,11 +7,11 @@ export function HomePage() {
     <Box>
       <Box
         sx={{
-          backgroundImage: 'url("/cover.png")',
+          backgroundImage: 'url("/cover2.jpg")',
           height: "100vh",
           width: "100vw",
           backgroundSize: "cover",
-          backgroundPosition: "bottom right",
+          backgroundPosition: { xs: "center", md: "bottom right" },
           backgroundAttachment: "fixed",
           display: "flex",
           alignItems: "center",
