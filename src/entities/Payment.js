@@ -1,8 +1,8 @@
 import { collection, doc, getDoc, getDocs, setDoc } from "firebase/firestore";
 import { firestore } from "../firebase";
 
-export default class Gift {
-  #table = "gifts";
+export default class Payment {
+  #table = "payments";
   #collection = collection(firestore, this.#table);
 
   async all() {
@@ -14,7 +14,7 @@ export default class Gift {
   async create(data) {
     const id = crypto.randomUUID();
     const registry = doc(this.#collection, id);
-    await setDoc(registry, { id, ...data });
+    await setDoc(registry, { id: id, ...data });
   }
 
   async get(id) {
