@@ -39,7 +39,7 @@ export function GiftPage() {
     const payment = await new MP().generatePayment(gift);
     const data = { ...payment, ...form };
     await paymentEntity.create(data);
-    redirect(payment.sandbox_init_point);
+    redirect(payment.init_point);
   };
 
   useEffect(() => {
