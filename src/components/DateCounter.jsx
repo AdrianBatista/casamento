@@ -12,7 +12,7 @@ const renderer = ({ days, hours, minutes, seconds }) => {
       }}
     >
       <Grid xs={12} md={3}>
-        <DateCard label="DAYS" value={days} />
+        <DateCard label="DIAS" value={days} />
       </Grid>
       <Grid xs={12} md={3}>
         <DateCard label="HORAS" value={hours} />

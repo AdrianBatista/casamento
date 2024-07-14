@@ -51,7 +51,7 @@ export function GiftsPage() {
                     sx={{ backgroundColor: "#4D5E89" }}
                     href={`/gift/${gift.id}`}
                   >
-                    Comprar
+                    Presentear
                   </Button>
                 </CardActions>
               </Card>
